@@ -1,0 +1,35 @@
+name: Aniket
+Fruit: "apple"
+job: 'student'
+
+#comments
+message: >
+this
+is the same 
+line
+
+bio: |
+i amasffadsnjfsnd
+schafhejnnvvmlksjj. 
+
+number: 1213
+gpa: 7.54
+attendance: 65.32
+boolean: No #false , n ,N , no
+
+
+#specify the type 
+one: !!int 1
+binary: !!int 0b1101
+octal: !!int 0652
+hexadec: !!int 0x45
+commaVal: !!int +69_000 #69,000 
+exp val: 6.022E21
+
+Fl: !!float 1.21
+infinite: !!float inf
+not a num: .nan
+
+# null
+hno: !!null Null # null , ~ 
+~: this is a null key

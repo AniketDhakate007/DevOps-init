@@ -1,0 +1,62 @@
+# .yml or .yaml are the same
+
+# nested sequence
+-
+ -mango
+ -apple
+ -banana
+-
+ -marks 
+ -roll
+ -name
+
+#key: value pairs are called maps 
+!!maps
+
+#nested mappings
+name: Kunal
+role:
+ age: 24
+ job: student
+
+#same as
+name: Kunal
+role: {age: 24 , job: student}
+
+pair example: !!pairs
+ -job: student
+ -job: teacher
+
+#same as 
+pair example: !!pairs [job: student, job: teacher]
+#this will be array of hashtables
+
+# !!set will allow u to use unique values
+names: !!set
+ ? karan
+ ? Arun
+
+#dictionary !!omap
+people: !!omap
+ -kunal:
+     name: Kunal k
+     age: 23
+     height: 5.8
+ -rahul:
+     name: rahul r
+     age: 24
+     height: 5.7
+
+#reusing same properties using anchors
+linkings: &likes
+ fav fruit: mango
+ dislike: grapes
+
+person1: 
+ name: raj
+ <<: *likes
+
+person2:
+ name: aman 
+ <<: *likes
+ dislike: berries
